@@ -1,0 +1,84 @@
+/* SOS Alert Container */
+.sos-alert-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b, #ff4e4e);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* SOS Alert Header */
+  .sos-alert-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Alert Icon */
+  .sos-alert-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* SOS Alert Message */
+  .sos-alert-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  /* SOS Button */
+  .sos-alert-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #ff4e4e;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .sos-alert-button:hover {
+    transform: scale(1.05);
+    background-color: #ffdedb;
+    color: #ff4e4e;
+  }
+  
+  /* Pulsing Animation */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sos-alert-header {
+      font-size: 2rem;
+    }
+  
+    .sos-alert-message {
+      font-size: 1rem;
+    }
+  
+    .sos-alert-button {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  

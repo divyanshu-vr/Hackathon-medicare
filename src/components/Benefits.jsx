@@ -1,11 +1,26 @@
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
+import { useNavigate } from "react-router-dom";
 
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    if (id === "0") {
+      navigate("/sosalert");
+    }
+    if (id === "2") {
+      navigate("/medicationreminder");
+    }
+    if (id === "3") {
+      navigate("/vitalmonitoring");
+    }
+  };
+
   return (
     <Section id="features">
       <div className="container relative z-2">
@@ -17,11 +32,12 @@ const Benefits = () => {
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] cursor-pointer"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
               key={item.id}
+              onClick={() => handleCardClick(item.id)} // Handle click for navigation
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
@@ -33,10 +49,6 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  {/* <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
-                  </p> */}
-                  
                 </div>
               </div>
 
