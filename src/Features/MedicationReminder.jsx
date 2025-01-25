@@ -1,6 +1,5 @@
-// src/components/MedicationReminder.jsx
+// src/components/MedicationReminder.js
 import React, { useState } from 'react';
-import './MedicationReminder.css';
 
 const MedicationReminder = () => {
     const [reminders, setReminders] = useState([]);
@@ -13,34 +12,41 @@ const MedicationReminder = () => {
             setMedication('');
             setTime('');
         } else {
-            alert("Please fill in both fields.");
+            alert('Please fill in both fields.');
         }
     };
 
     return (
-        <div className="medication-reminder-container">
-            <h2 className="medication-reminder-header">Medication Reminder</h2>
-            <div className="input-container">
+        <div className="bg-gray-900 text-white p-8 rounded-lg max-w-md mx-auto mt-12 text-center">
+            <h2 className="text-3xl font-semibold text-blue-500 mb-4">Medication Reminder</h2>
+            <p className="text-lg text-gray-400 mb-6">Set your medication timings and get timely reminders.</p>
+
+            <div className="space-y-4">
                 <input
-                    className="medication-input"
                     type="text"
-                    placeholder="Medication"
+                    placeholder="Medication Name"
                     value={medication}
                     onChange={(e) => setMedication(e.target.value)}
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <input
-                    className="time-input"
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
+                    className="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
             </div>
-            <button className="medication-add-button" onClick={handleAddReminder}>
+
+            <button
+                onClick={handleAddReminder}
+                className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:bg-blue-400 hover:scale-105 focus:outline-none"
+            >
                 Add Reminder
             </button>
-            <ul className="reminders-list">
+
+            <ul className="mt-6 space-y-4">
                 {reminders.map((reminder, index) => (
-                    <li key={index} className="reminder-item">
+                    <li key={index} className="text-lg text-gray-300">
                         {reminder.medication} at {reminder.time}
                     </li>
                 ))}
