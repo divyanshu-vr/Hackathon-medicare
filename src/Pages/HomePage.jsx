@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
 import Collaboration from "../components/Collaboration";
 import Footer from "../components/Footer";
-import Pricing from "../components/Pricing";
+// import Pricing from "../components/Pricing";
 import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
 import ButtonGradient from "../assets/svg/ButtonGradient";
@@ -20,7 +20,7 @@ const HomePage = () => {
         <Benefits />
         <Collaboration />
         <Services />
-        <Pricing />
+        {/* <Pricing /> */}
         <Roadmap />
         <Footer />
       </div>
