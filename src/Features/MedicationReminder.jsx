@@ -1,5 +1,5 @@
 // src/components/MedicationReminder.js
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const MedicationReminder = () => {
     const [reminders, setReminders] = useState([]);
