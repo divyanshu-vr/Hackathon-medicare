@@ -4,6 +4,7 @@ import LoginPage from "./Pages/LoginPage"; // For Login
 import SOSAlert from './Features/SOSalert.jsx';
 import MedicationReminder from "./Features/MedicationReminder.jsx";
 import VitalMonitoring from "./Features/VitalMonitoring.jsx";
+import AiChatPage from "./Pages/AiChat.jsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/sosalert" element={<SOSAlert />} />
         <Route path="/medicationreminder" element={<MedicationReminder />} />
         <Route path="/vitalmonitoring" element={<VitalMonitoring />} />
+        <Route path="/api/check-medicine-interaction" element={<AiChatPage />} />
       </Routes>
     </div>
   );
