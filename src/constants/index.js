@@ -42,11 +42,11 @@ export const navigation = [
     title: "Features",
     url: "#features",
   },
-  {
-    id: "1",
-    title: "Pricing",
-    url: "#pricing",
-  },
+  // {
+  //   id: "1",
+  //   title: "Pricing",
+  //   url: "#pricing",
+  // },
   {
     id: "2",
     title: "How to use",
@@ -205,55 +205,56 @@ export const collabApps = [
   },
 ];
 
-export const pricing = [
-  {
-    id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
-    ],
-  },
-  {
-    id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
-    features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
-    ],
-  },
-  {
-    id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
-    ],
-  },
-];
+// export const pricing = [
+//   {
+//     id: "0",
+//     title: "Basic",
+//     description: "AI chatbot, personalized recommendations",
+//     price: "0",
+//     features: [
+//       "An AI chatbot that can understand your queries",
+//       "Personalized recommendations based on your preferences",
+//       "Ability to explore the app and its features without any cost",
+//     ],
+//   },
+//   {
+//     id: "1",
+//     title: "Premium",
+//     description: "Advanced AI chatbot, priority support, analytics dashboard",
+//     price: "9.99",
+//     features: [
+//       "An advanced AI chatbot that can understand complex queries",
+//       "An analytics dashboard to track your conversations",
+//       "Priority support to solve issues quickly",
+//     ],
+//   },
+//   {
+//     id: "2",
+//     title: "Enterprise",
+//     description: "Custom AI chatbot, advanced analytics, dedicated account",
+//     price: null,
+//     features: [
+//       "An AI chatbot that can understand your queries",
+//       "Personalized recommendations based on your preferences",
+//       "Ability to explore the app and its features without any cost",
+//     ],
+//   },
+// ];
 
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "SOS Alert",
+    text: "A feature to host an an Emergency call to the user's guardian.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    url: "/sosalert",
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Assist Watch",
+    text: "This feature allows the user to host an assistant for their needs.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,33 +262,35 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Medication Reminder",
+    text: "This feature allows users to add their medication timings and get a quick reminder.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
+    url: "/medicationreminder"
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Vital Monitoring",
+    text: "This feature allows user to add their vitals Blood Pressure, Heart Rate and Glucose level..",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
     light: true,
+    url: "/vitalmonitoring",
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Wellness Score",
+    text: "This feature allows user to check their wellness score.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Family Connectivity",
+    text: "This feature allows user to add their family update details for connectivity.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,

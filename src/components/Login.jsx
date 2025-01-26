@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+ 
 
 
 const Login = () => {
@@ -7,14 +8,16 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="min-h-screen bg flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text">
+    
+    <div className="min-h-screen bg flex flex-col justify-center py-12 sm:px-6 lg:px-8" >
+      <div className="sm:mx-auto sm:w-full sm:max-w-md z-2">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text z-2">
           Login to your account
         </h2>
       </div>
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-n-7 py-8 px-4 shadow sm:rounded-lg sm:px-10">
+
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md z-2" >
+        <div className="bg-n-11 py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-n-3">
@@ -58,13 +61,14 @@ const Login = () => {
             </div>
           </form>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link to="/signup" className="font-medium text-n-4 hover:text-blue-500">
               Sign up
             </Link>
           </p>
         </div>
       </div>
+      
     </div>
   );
 };
