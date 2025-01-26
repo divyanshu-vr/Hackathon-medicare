@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage"; // A wrapper for components like Hero, Benefits, etc.
 import LoginPage from "./Pages/LoginPage"; // For Login
-import SOSAlert from './Features/SOSalert.jsx';
+import SOSAlert from './Features/SOSAlert.jsx';
 import MedicationReminder from "./Features/MedicationReminder.jsx";
 import VitalMonitoring from "./Features/VitalMonitoring.jsx";
 import AiChatPage from "./Pages/AiChat.jsx";
