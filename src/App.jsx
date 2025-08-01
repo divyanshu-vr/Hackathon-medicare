@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/sosalert" element={<SOSAlert />} />
         <Route path="/medicationreminder" element={<MedicationReminder />} />
         <Route path="/vitalmonitoring" element={<VitalMonitoring />} />
-        <Route path="/api/check-medicine-interaction" element={<AiChatPage />} />
+        <Route path="/medicine-checker" element={<AiChatPage />} />
       </Routes>
     </div>
   );

@@ -39,7 +39,7 @@ const Hero = () => {
           With the help of MediCare you can get to know the side Effects or the reaction between the medicines you take together. Get to know about the medicines you take
           with MediCare, Click below to Get Started.
           </p>
-          <Button href="/api/check-medicine-interaction" white>
+          <Button href="/medicine-checker" white>
             Get started
           </Button>
         </div>

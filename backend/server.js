@@ -8,7 +8,8 @@ const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5174'
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  credentials: true
 }));
 app.use(express.json());
 
@@ -25,13 +26,17 @@ app.post('/api/check-medicine-interaction', async (req, res) => {
         error: 'At least two medicines are required' 
       });
     }
-    console.log('Gemini API Key:', process.env.GEMINI_API_KEY);
 
+    // Check if API key is available
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(500).json({ 
+        error: 'Gemini API key is not configured. Please set GEMINI_API_KEY in your .env file.' 
+      });
+    }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-    
-    const prompt = `You are an medical AI agent.Respond the reaction between the drugs.Tell weather it is safe to take drug together.Result should not be more than 50 words.The medicine list is: ${medicines.join(', ')}.`;
+    const prompt = `You are a medical AI agent. Analyze the potential drug interactions between the following medications: ${medicines.join(', ')}. Provide a brief assessment of whether it's safe to take these drugs together. Keep your response under 50 words and focus on safety concerns.`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
@@ -47,8 +52,14 @@ app.post('/api/check-medicine-interaction', async (req, res) => {
   }
 });
 
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'OK', message: 'Server is running' });
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`CORS enabled for: http://localhost:5173, http://localhost:5174, http://localhost:3000`);
 });
 
